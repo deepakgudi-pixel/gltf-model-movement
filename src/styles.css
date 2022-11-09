@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #7a6954bf;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+.cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cursor-border {
+  --size: 50px;
+  position: fixed;
+  z-index: 9;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px black;
+  pointer-events: none;
+  transition: all 0.15s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
